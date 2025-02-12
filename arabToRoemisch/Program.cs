@@ -16,27 +16,49 @@ namespace arabToRoman {
  internal class Program {
 
   // Programstart
-  static void Main ( string [] args ) {
-   int[] arab = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000 };
-   string[] roemisch = { "I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M" };
-   int position = 12;
-   string roemN = "";
-   int number;
-   Console.Write("Enter a Number between 1 and 3999: ");
-   number = Convert.ToInt32(Console.ReadLine());
-   if ( number < 1 || number > 3999 ) {
-    Console.WriteLine("Oidaa! Why u dont understand!! ");
-    return;
+  static void Main(string[] args)
+        {
+            Console.Write("Bitte geben Sie eine Zahl zwischen 1 und 3999 ein: ");
+            string input = Console.ReadLine();
+            int number;
+
+            // Eingabevalidierung: Überprüft, ob die Eingabe in einen Integer konvertiert werden kann
+            if (!int.TryParse(input, out number))
+            {
+                Console.WriteLine("Ungültige Eingabe! Bitte geben Sie eine ganze Zahl ein.");
+                return;
+            }
+
+            // Prüfung, ob die Zahl im gültigen Bereich liegt
+            if (number < 1 || number > 3999)
+            {
+                Console.WriteLine("Die Zahl muss zwischen 1 und 3999 liegen.");
+                return;
+            }
+
+            // Umwandlung und Ausgabe der römischen Zahl
+            string romanNumber = ConvertToRoman(number);
+            Console.WriteLine($"\nDie römische Zahl lautet: {romanNumber}");
+            Console.ReadKey();
+        }
+  private static string ConvertToRoman(int number)
+        {
+            // Definition der arabischen Zahlen und zugehörigen römischen Ziffern in absteigender Reihenfolge
+            int[] arabic = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+            string[] roman = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+
+            StringBuilder result = new StringBuilder();
+
+            // Iteration über alle Werte und sukzessive Subtraktion des aktuellen Wertes
+            for (int i = 0; i < arabic.Length; i++)
+            {
+                while (number >= arabic[i])
+                {
+                    result.Append(roman[i]);
+                    number -= arabic[i];
+                }
+            }
+            return result.ToString();
+        }
     }
-   while ( number > 0 ) {
-    while ( number >= arab [position] ) {
-     roemN = roemN + roemisch [position];
-     number = number - arab [position];
-     }
-    position--;
-    }
-   Console.Write("\nThe Roman Number is: " + roemN);
-   Console.ReadKey();
-   }
-  }
- }
+}

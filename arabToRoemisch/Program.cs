@@ -2,7 +2,7 @@
  * ---------------------------------------------------------
  * Filename: arabtoRoman
  * Version: 1
- * Revision: 2
+ * Revision: 3
  * Release: 2022 - 03 - 12
  * Last Update: 12.02.2025
  * Author: Kentaro hakase 
@@ -11,6 +11,7 @@
 */
 // namespaces
 using System;
+using System.Text;
 
 
 namespace arabToRoman {

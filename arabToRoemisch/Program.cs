@@ -2,11 +2,12 @@
  * ---------------------------------------------------------
  * Filename: arabtoRoman
  * Version: 1
- * Revision: 1
+ * Revision: 2
  * Release: 2022 - 03 - 12
+ * Last Update: 12.02.2025
  * Author: Kentaro hakase 
  * -----------------------------------------------------------
- (C) Copyright 2022 by Kentaro hakase. All rights reserved.
+ (C) Copyright 2022 - 2025 by Kentaro hakase. All rights reserved.
 */
 // namespaces
 using System;

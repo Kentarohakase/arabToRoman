@@ -14,7 +14,7 @@ using System;
 using System.Text;
 
 
-namespace arabToRoman {
+namespace ArabToRoman {
  internal class Program {
 
   // Programstart
@@ -46,18 +46,18 @@ namespace arabToRoman {
   private static string ConvertToRoman(int number)
         {
             // Definition der arabischen Zahlen und zugehörigen römischen Ziffern in absteigender Reihenfolge
-            int[] arabic = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
-            string[] roman = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+            int[] arabicValues = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+            string[] romanSymbols = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
 
             StringBuilder result = new StringBuilder();
 
             // Iteration über alle Werte und sukzessive Subtraktion des aktuellen Wertes
-            for (int i = 0; i < arabic.Length; i++)
+            for (int i = 0; i < arabicValues.Length; i++)
             {
-                while (number >= arabic[i])
+                while (number >= arabicValues[i])
                 {
-                    result.Append(roman[i]);
-                    number -= arabic[i];
+                    result.Append(romanSymbols[i]);
+                    number -= arabicValues[i];
                 }
             }
             return result.ToString();

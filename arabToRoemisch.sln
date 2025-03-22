@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arabToRoemisch", "arabToRoemisch\arabToRoemisch.csproj", "{C184573C-0667-422D-97AE-6C12AC440442}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArabToRoemisch", "arabToRoemisch\ArabToRoemisch.csproj", "{C184573C-0667-422D-97AE-6C12AC440442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

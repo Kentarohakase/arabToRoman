@@ -4,8 +4,8 @@
  * Version: 1
  * Revision: 3
  * Release: 2022 - 03 - 12
- * Last Update: 12.02.2025
- * Author: Kentaro hakase 
+ * Last Update: 22.03.2025
+ * Author: Kentaro Hakase 
  * -----------------------------------------------------------
  (C) Copyright 2022 - 2025 by Kentaro hakase. All rights reserved.
 */
@@ -18,7 +18,7 @@ namespace ArabToRoman {
  internal class Program {
 
   // Programstart
-  static void Main(string[] args)
+  static void Main( string[ ] args )
         {
             Console.Write("Bitte geben Sie eine Zahl zwischen 1 und 3999 ein: ");
             string input = Console.ReadLine();

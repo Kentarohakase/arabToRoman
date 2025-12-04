@@ -19,28 +19,25 @@ namespace ArabToRoman
 {
   internal class Program
   {
-    // Programstart
+    // Offensichtlicher Einstiegspunkt des Programms
     static void Main(string[] args)
     {
-      // Setzt den Fenstertitel der Konsole zur besseren Benutzerführung
       Console.Title = "Arabische Zahl in Römische Zahl umwandeln";
 
       // Endlosschleife, die erst beim Benutzerwunsch abbricht
       // (ermöglicht wiederholte Umwandlungen ohne Programmneustart)
       while (true)
       {
-        // Fordert den Benutzer zur Eingabe einer gültigen arabischen Zahl
         int number = InputHelper.ReadInt("Bitte gib eine arabische Zahl zwischen 1 und 3999 ein: ", 1, 3999);
-        // Gibt das Ergebnis formatiert in der Konsole aus
         Console.WriteLine($"\nDie römische Zahl lautet: {RomanConverter.Convert(number)}");
-        // Fragt nach, ob der Benutzer eine weitere Umwandlung durchführen möchte
+
         Console.Write("Willst du es nochmal machen?(j/n)");
         //
         if (Console.ReadLine()?.ToLower() != "j")
         {
           break;
         }
-        // Löscht die Konsole für eine saubere nächste Runde
+        // Wird gemacht, damit die Konsole für die nächste Eingabe wieder leer ist
         Console.Clear();
       }
       Console.WriteLine("Bye!");

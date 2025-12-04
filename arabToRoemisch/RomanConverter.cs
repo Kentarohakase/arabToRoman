@@ -26,6 +26,7 @@ namespace arabToRoemisch
     };
     public static string Convert(int number)
     {
+      //Weil die Römischen Zahlen nur bis 3999 abgedeckt sind, wurde hier eine Validierung eingebaut.
       if (number < 1 || number > 3999)
       {
         throw new ArgumentOutOfRangeException(nameof(number), "Die Zahl muss zwischen 1 und 3999 liegen.");

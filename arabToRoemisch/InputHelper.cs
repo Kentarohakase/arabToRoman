@@ -21,7 +21,7 @@ namespace arabToRoemisch
         if (!int.TryParse(input, out number))
         {
           Console.WriteLine("Ungültige Eingabe! Bitte gib eine ganze Zahl ein.");
-          Thread.Sleep(2000); // Kurze Pause, damit die Meldung sichtbar bleibt
+          Thread.Sleep(2000); // Kurze Pause, damit die Meldung sichtbar bleibt, damit ein reibungsloser Ablauf ist ohne weitere Benutzer eingabe, wie zum Beispiel mit Console.ReadKey().
           Console.Clear();
           continue;
         }
@@ -29,7 +29,7 @@ namespace arabToRoemisch
         if(number < min || number > max)
         {
           Console.WriteLine($"Die Zahl muss zwischen {min} und {max} liegen.");
-          Thread.Sleep(2000); // Kurze Pause, damit die Meldung sichtbar bleibt
+          Thread.Sleep(2000); // Kurze Pause, damit die Meldung sichtbar bleibt, damit ein reibungsloser Ablauf ist ohne weitere Benutzer eingabe, wie zum Beispiel mit Console.ReadKey().
           Console.Clear();
           continue;
         }
